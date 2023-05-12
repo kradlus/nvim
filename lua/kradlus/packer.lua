@@ -40,7 +40,7 @@ return packer.startup({function(use)
     'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' },
     config = function()
       local gitsigns_ok, gitsigns = pcall(require, 'gitsigns')
-      if gitsigns_ok then
+      if not gitsigns_ok then
         return
       end
 
@@ -87,7 +87,7 @@ return packer.startup({function(use)
     requires = { 'nvim-tree/nvim-web-devicons', opt = true },
     config = function()
       local lualine_ok, lualine = pcall(require, 'lualine')
-      if lualine_ok then
+      if not lualine_ok then
         return
       end
 
