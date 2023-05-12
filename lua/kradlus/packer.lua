@@ -89,6 +89,19 @@ return packer.startup({
 					"jose-elias-alvarez/null-ls.nvim",
 					requires = { "nvim-lua/plenary.nvim" },
 				},
+
+				-- Autopair
+				use({
+					"windwp/nvim-autopairs",
+					config = function()
+						local ok, autopair = pcall(require, "nvim-autopairs")
+						if not ok then
+							return
+						end
+
+						autopair.setup()
+					end,
+				}),
 			},
 		})
 
