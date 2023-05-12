@@ -23,7 +23,12 @@ vim.cmd([[
 
 local packer_bootstrap = ensure_packer()
 
-return require('packer').startup({function(use)
+local packer_ok, packer = pcall(require, 'packer')
+if not packer_ok then
+  return
+end
+
+return packer.startup({function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
@@ -33,7 +38,15 @@ return require('packer').startup({function(use)
   -- Use dependency and run lua function after load
   use {
     'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' },
-    config = function() require('gitsigns').setup() end
+    config = function()
+      local gitsigns_ok, gitsigns = pcall(require, 'gitsigns')
+      if gitsigns_ok then
+        return
+      end
+
+      -- gitsigns setup
+      gitsigns.setup()
+    end
   }
 
   -- Telescope
@@ -73,7 +86,12 @@ return require('packer').startup({function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true },
     config = function()
-      require("lualine").setup({
+      local lualine_ok, lualine = pcall(require, 'lualine')
+      if lualine_ok then
+        return
+      end
+
+      lualine.setup({
         options = {
           theme = "material"
         }
@@ -85,7 +103,7 @@ return require('packer').startup({function(use)
   use({ "folke/tokyonight.nvim" })
 
   if packer_bootstrap then
-    require('packer').sync()
+    packer.sync()
   end
 end,
 
