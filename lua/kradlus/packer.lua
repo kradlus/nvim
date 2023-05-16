@@ -105,21 +105,11 @@ return packer.startup({
 			},
 		})
 
-		-- Lualine
+		-- Comment
 		use({
-			"nvim-lualine/lualine.nvim",
-			requires = { "nvim-tree/nvim-web-devicons", opt = true },
+			"numToStr/Comment.nvim",
 			config = function()
-				local lualine_ok, lualine = pcall(require, "lualine")
-				if not lualine_ok then
-					return
-				end
-
-				lualine.setup({
-					options = {
-						theme = "material",
-					},
-				})
+				require("Comment").setup()
 			end,
 		})
 
