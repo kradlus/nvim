@@ -13,4 +13,4 @@ vim.opt.relativenumber = true
 
 -- Theme
 vim.opt.termguicolors = true
-pcall(vim.cmd, "colorscheme tokyonight")
+pcall(vim.cmd, "colorscheme rose-pine")

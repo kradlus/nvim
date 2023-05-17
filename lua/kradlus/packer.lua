@@ -113,8 +113,8 @@ return packer.startup({
 			end,
 		})
 
-		-- TokyoNight
-		use({ "folke/tokyonight.nvim" })
+		-- rose-pine
+		use({ "rose-pine/neovim" })
 
 		if packer_bootstrap then
 			packer.sync()
