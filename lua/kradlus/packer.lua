@@ -35,6 +35,27 @@ return packer.startup({
 
 		-- Post-install/update hook with neovim command
 		use({ "nvim-treesitter/nvim-treesitter" })
+		use({
+			"nvim-treesitter/nvim-treesitter-context",
+			config = function()
+				local ctx_ok, ctx = pcall(require, "treesitter-context")
+				if not ctx_ok then
+					return
+				end
+				ctx.setup({
+					enable = true,
+					max_lines = 0,
+					min_window_height = 0,
+					line_numbers = true,
+					multiline_threshold = 20,
+					trim_scope = "outer",
+					mode = "cursor",
+					separator = nil,
+					zindex = 20,
+					on_attach = nil,
+				})
+			end,
+		})
 
 		-- Use dependency and run lua function after load
 		use({
