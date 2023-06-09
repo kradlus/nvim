@@ -1,4 +1,4 @@
-require("kradlus.packer")
+require("kradlus.lazy")
 require("kradlus.core.options")
 require("kradlus.core.keybindings")
 require("kradlus.plugins.mason")

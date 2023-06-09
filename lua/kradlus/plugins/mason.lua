@@ -4,5 +4,4 @@ if not mason_ok then
   return
 end
 
-mason.setup()
-
+return mason.setup()

@@ -30,4 +30,4 @@ vim.api.nvim_create_autocmd("LspAttach", {
 --   lsp.default_keymaps({ buffer = bufnr })
 -- end)
 
-lsp.setup()
+return lsp.setup()

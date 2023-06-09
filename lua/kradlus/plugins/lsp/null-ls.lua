@@ -5,7 +5,7 @@ if not null_ls_ok then
 end
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-null_ls.setup({
+return null_ls.setup({
 	debug = true,
 	sources = {
 		null_ls.builtins.formatting.stylua,
