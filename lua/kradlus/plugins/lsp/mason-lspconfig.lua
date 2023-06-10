@@ -10,7 +10,7 @@ if not lspconfig_ok then
 end
 
 mason.setup({
-	ensure_installed = { "lua_ls", "rust_analyzer", "zls", "pyright", "pylsp" },
+	ensure_installed = { "lua_ls", "rust_analyzer", "zls", "pyright", "pylsp", "gopls" },
 	automatic_installation = true,
 })
 

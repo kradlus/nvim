@@ -29,7 +29,6 @@ lazy.setup({
 
 	{
 		"nvim-treesitter/nvim-treesitter-context",
-		lazy = true,
 		config = function()
 			local ctx_ok, ctx = pcall(require, "treesitter-context")
 			if not ctx_ok then
@@ -54,7 +53,6 @@ lazy.setup({
 	{
 		"lewis6991/gitsigns.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
-		lazy = true,
 		config = function()
 			local gitsigns_ok, gitsigns = pcall(require, "gitsigns")
 			if not gitsigns_ok then
@@ -110,7 +108,6 @@ lazy.setup({
 			-- Autopair
 			{
 				"windwp/nvim-autopairs",
-				lazy = true,
 				config = function()
 					local ok, autopair = pcall(require, "nvim-autopairs")
 					if not ok then
@@ -126,7 +123,6 @@ lazy.setup({
 	-- Comment
 	{
 		"numToStr/Comment.nvim",
-		lazy = true,
 		config = function()
 			require("Comment").setup()
 		end,
