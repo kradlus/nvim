@@ -128,6 +128,13 @@ lazy.setup({
 		end,
 	},
 
-	-- rose-pine
-	{ "rose-pine/neovim" },
+	-- Indent blankline
+	{ "lukas-reineke/indent-blankline.nvim" },
+
+	-- catppuccin
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+	},
 })
