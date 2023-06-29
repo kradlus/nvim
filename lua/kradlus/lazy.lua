@@ -131,6 +131,9 @@ lazy.setup({
 	-- Indent blankline
 	{ "lukas-reineke/indent-blankline.nvim" },
 
+	-- nvim-linefly
+	{ "bluz71/nvim-linefly" },
+
 	-- catppuccin
 	{
 		"catppuccin/nvim",
