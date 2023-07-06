@@ -134,6 +134,21 @@ lazy.setup({
 	-- nvim-linefly
 	{ "bluz71/nvim-linefly" },
 
+	-- LazyGit
+	{
+		"kdheepak/lazygit.nvim",
+		-- optional for floating window border decoration
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+	},
+
+	-- Markdown preview
+	{
+		"iamcco/markdown-preview.nvim",
+		build = "cd app && yarn install",
+	},
+
 	-- catppuccin
 	{
 		"catppuccin/nvim",
