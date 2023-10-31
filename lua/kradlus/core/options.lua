@@ -18,4 +18,4 @@ vim.o.background = "dark"
 
 -- Theme
 vim.opt.termguicolors = true
-pcall(vim.cmd, "colorscheme moonfly")
+pcall(vim.cmd, "colorscheme catppuccin")
