@@ -149,10 +149,17 @@ lazy.setup({
 		build = "cd app && yarn install",
 	},
 
-	-- catppuccin
+	-- nim
 	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		priority = 1000,
+		"alaviss/nim.nvim",
+		name = "nim",
+		dependencies = {
+			"alaviss/tree-sitter-nim",
+		},
+		config = function()
+			vim.treesitter.language("nim", "tree-sitter-nim")
+		end,
+		lazy = true,
 	},
+	{ "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
 })
