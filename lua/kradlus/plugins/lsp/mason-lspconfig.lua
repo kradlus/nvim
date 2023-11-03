@@ -32,6 +32,7 @@ return mason.setup_handlers({
 	end,
 	["lua_ls"] = function()
 		lspconfig.lua_ls.setup({
+			capabilities = capabilities,
 			settings = {
 				Lua = {
 					diagnostics = {
