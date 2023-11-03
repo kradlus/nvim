@@ -129,10 +129,22 @@ lazy.setup({
 	},
 
 	-- Indent blankline
-	{ "lukas-reineke/indent-blankline.nvim" },
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		dependencies = { "HiPhish/rainbow-delimiters.nvim" },
+		config = function()
+			require("kradlus.plugins.indent-blankline")
+		end,
+	},
 
-	-- nvim-linefly
-	{ "bluz71/nvim-linefly" },
+	-- lualine
+	{
+		"nvim-lualine/lualine.nvim",
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+		config = function()
+			require("kradlus.plugins.lualine")
+		end,
+	},
 
 	-- LazyGit
 	{
