@@ -131,7 +131,6 @@ lazy.setup({
 	-- Indent blankline
 	{
 		"lukas-reineke/indent-blankline.nvim",
-		dependencies = { "HiPhish/rainbow-delimiters.nvim" },
 		config = function()
 			require("kradlus.plugins.indent-blankline")
 		end,
