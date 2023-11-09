@@ -13,4 +13,8 @@ vim.keymap.set("n", "<leader>fk", builtin.keymaps, {})
 vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, {})
 vim.keymap.set("n", "<leader>fd", builtin.diagnostics, {})
 
-return telescope.setup({})
+return telescope.setup({
+	defaults = {
+		layout_strategy = "vertical",
+	},
+})
