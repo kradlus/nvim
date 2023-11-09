@@ -16,5 +16,9 @@ vim.keymap.set("n", "<leader>fd", builtin.diagnostics, {})
 return telescope.setup({
 	defaults = {
 		layout_strategy = "vertical",
+		layout_config = {
+			prompt_position = "top",
+			mirror = true,
+		},
 	},
 })
