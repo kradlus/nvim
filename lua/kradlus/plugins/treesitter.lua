@@ -3,8 +3,8 @@ if not ok then
 	return
 end
 
-return treesitter.setup({
-	ensure_installed = { "c", "python", "go", "javascript", "typescript" },
+treesitter.setup({
+	ensure_installed = { "c", "python", "go", "javascript", "typescript", "lua" },
 	sync_install = false,
 	auto_install = true,
 	indent = { enable = true },

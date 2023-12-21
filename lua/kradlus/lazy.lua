@@ -5,7 +5,7 @@ if not vim.loop.fs_stat(lazypath) then
 		"clone",
 		"--filter=blob:none",
 		"https://github.com/folke/lazy.nvim.git",
-		"--branch=stable", -- latest stable release
+		"--branch=stable",
 		lazypath,
 	})
 end
@@ -18,6 +18,8 @@ end
 
 lazy.setup({
 
+	{ "folke/lazy.nvim" },
+
 	{
 		"folke/which-key.nvim",
 		{ "folke/neoconf.nvim", cmd = "Neoconf" },
@@ -25,10 +27,11 @@ lazy.setup({
 	},
 
 	-- Post-install/update hook with neovim command
-	{ "nvim-treesitter/nvim-treesitter" },
+	{ "nvim-treesitter/nvim-treesitter", lazy = true },
 
 	{
 		"nvim-treesitter/nvim-treesitter-context",
+		lazy = false,
 		config = function()
 			local ctx_ok, ctx = pcall(require, "treesitter-context")
 			if not ctx_ok then
@@ -67,11 +70,12 @@ lazy.setup({
 	-- Telescope
 	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.1",
+		-- tag = "0.1.1",
 		lazy = true,
 		dependencies = {
 			{ "nvim-lua/plenary.nvim" },
 			{ "nvim-telescope/telescope-symbols.nvim" },
+			{ "nvim-telescope/telescope-ui-select.nvim" },
 		},
 	},
 
@@ -79,6 +83,7 @@ lazy.setup({
 	{
 		"VonHeikemen/lsp-zero.nvim",
 		branch = "v3.x",
+		lazy = false,
 		dependencies = {
 			-- LSP Support
 			{ "neovim/nvim-lspconfig" }, -- Required
@@ -86,7 +91,7 @@ lazy.setup({
 			{
 				-- Optional
 				"williamboman/mason.nvim",
-				lazy = true,
+				lazy = false,
 				build = function()
 					pcall(vim.cmd, "MasonUpdate")
 				end,
@@ -139,10 +144,11 @@ lazy.setup({
 	-- lualine
 	{
 		"nvim-lualine/lualine.nvim",
-		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+		dependencies = { "nvim-tree/nvim-web-devicons", lazy = false },
 		config = function()
-			require("kradlus.plugins.lualine")
+			pcall(require, "kradlus.plugins.lualine")
 		end,
+		lazy = false,
 	},
 
 	-- LazyGit
@@ -152,12 +158,14 @@ lazy.setup({
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
+		lazy = true,
 	},
 
 	-- Markdown preview
 	{
 		"iamcco/markdown-preview.nvim",
 		build = "cd app && yarn install",
+		lazy = true,
 	},
 
 	-- nim

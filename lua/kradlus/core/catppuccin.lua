@@ -46,4 +46,4 @@ if not ok then
 	return
 end
 
-return catppuccin.setup(config)
+catppuccin.setup(config)

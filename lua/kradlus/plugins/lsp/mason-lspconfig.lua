@@ -21,7 +21,7 @@ mason.setup({
 
 local capabilities = nvim_cmp.default_capabilities()
 
-return mason.setup_handlers({
+mason.setup_handlers({
 	-- The first entry (without a key) will be the default handler
 	-- and will be called for each installed server that doesn't have
 	-- a dedicated handler.

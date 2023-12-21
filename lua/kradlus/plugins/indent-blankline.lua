@@ -3,4 +3,4 @@ if not ibl_ok then
 	print("Cannot load ibl")
 end
 
-return ibl.setup({})
+ibl.setup({})

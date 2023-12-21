@@ -1,7 +1,7 @@
-local mason_ok, mason = pcall(require, 'mason')
+local mason_ok, mason = pcall(require, "mason")
 if not mason_ok then
-  print("Failed to load Mason")
-  return
+	print("Failed to load Mason")
+	return
 end
 
-return mason.setup()
+mason.setup()

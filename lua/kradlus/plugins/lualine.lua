@@ -4,7 +4,7 @@ if not lualine_ok then
 	print("Failed to load lualine")
 end
 
-return lualine.setup({
+lualine.setup({
 	options = {
 		icons_enabled = true,
 		theme = "iceberg_dark",
