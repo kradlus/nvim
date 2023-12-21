@@ -3,9 +3,7 @@ if not harpoon_ok then
 	return
 end
 
-harpoon:setup()
-
-vim.keymap.set("n", "<leader>a", function()
+vim.keymap.set("n", "<C-a>", function()
 	harpoon:list():append()
 end)
 vim.keymap.set("n", "<C-e>", function()
@@ -32,3 +30,5 @@ end)
 vim.keymap.set("n", "<C-S-N>", function()
 	harpoon:list():next()
 end)
+
+harpoon:setup()
