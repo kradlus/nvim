@@ -14,3 +14,7 @@ vim.keymap.set({ "n", "v" }, "<leader>pv", ":Ex<CR>", opts)
 -- Indentation
 vim.keymap.set({ "n", "v" }, ">", ">gv", opts)
 vim.keymap.set({ "n", "v" }, "<", "<gv", opts)
+
+-- Buffers
+vim.keymap.set({ "n", "v" }, "<leader>bn", ":bnext<CR>")
+vim.keymap.set({ "n", "v" }, "<leader>bp", ":bprev<CR>")

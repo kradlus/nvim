@@ -190,4 +190,15 @@ lazy.setup({
 			})
 		end,
 	},
+
+	-- Harpoon 2
+	{
+		"ThePrimeagen/harpoon",
+		lazy = false,
+		dependencies = { "nvim-lua/plenary.nvim" },
+		branch = "harpoon2",
+		config = function()
+			require("kradlus.plugins.harpoon")
+		end,
+	},
 })
