@@ -71,7 +71,7 @@ lazy.setup({
 	{
 		"nvim-telescope/telescope.nvim",
 		-- tag = "0.1.1",
-		lazy = true,
+		lazy = false,
 		dependencies = {
 			{ "nvim-lua/plenary.nvim" },
 			{ "nvim-telescope/telescope-symbols.nvim" },
@@ -158,14 +158,14 @@ lazy.setup({
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
-		lazy = true,
+		lazy = false,
 	},
 
 	-- Markdown preview
 	{
 		"iamcco/markdown-preview.nvim",
 		build = "cd app && yarn install",
-		lazy = true,
+		lazy = false,
 	},
 
 	-- nim

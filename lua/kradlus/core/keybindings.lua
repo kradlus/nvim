@@ -16,5 +16,5 @@ vim.keymap.set({ "n", "v" }, ">", ">gv", opts)
 vim.keymap.set({ "n", "v" }, "<", "<gv", opts)
 
 -- Buffers
-vim.keymap.set({ "n", "v" }, "<leader>bn", ":bnext<CR>")
-vim.keymap.set({ "n", "v" }, "<leader>bp", ":bprev<CR>")
+vim.keymap.set({ "n", "v" }, "<leader>bn", ":bnext<CR>", opts)
+vim.keymap.set({ "n", "v" }, "<leader>bp", ":bprev<CR>", opts)
