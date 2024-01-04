@@ -29,6 +29,9 @@ lazy.setup({
 	-- Post-install/update hook with neovim command
 	{ "nvim-treesitter/nvim-treesitter", lazy = true },
 
+	-- fugitive
+	{ "tpope/vim-fugitive" },
+
 	{
 		"nvim-treesitter/nvim-treesitter-context",
 		lazy = false,
@@ -198,5 +201,13 @@ lazy.setup({
 		config = function()
 			require("kradlus.plugins.harpoon")
 		end,
+	},
+
+	{
+		"danymat/neogen",
+		dependencies = "nvim-treesitter/nvim-treesitter",
+		config = true,
+		-- Uncomment next line if you want to follow only stable versions
+		-- version = "*"
 	},
 })

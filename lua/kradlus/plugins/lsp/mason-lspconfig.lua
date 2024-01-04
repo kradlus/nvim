@@ -28,6 +28,9 @@ mason.setup_handlers({
 	function(server_name) -- default handler (optional)
 		lspconfig[server_name].setup({
 			capabilities = capabilities,
+			opts = {
+				inlay_hints = { enable = true },
+			},
 		})
 	end,
 	["lua_ls"] = function()
