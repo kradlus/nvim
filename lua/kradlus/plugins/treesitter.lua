@@ -16,7 +16,12 @@ parsers.get_parser_configs().asm = {
 		files = { "src/parser.c" },
 		branch = "main",
 	},
+	filetype = { "asm", "fasm", "nasm" },
 }
+
+vim.cmd("autocmd BufRead,BufNewFile *.asm set ft=asm")
+vim.cmd("autocmd BufRead,BufNewFile *.fasm set ft=fasm")
+vim.cmd("autocmd BufRead,BufNewFile *.nasm set ft=nasm")
 
 treesitter.setup({
 	ensure_installed = { "c", "python", "go", "javascript", "typescript", "lua" },

@@ -100,6 +100,9 @@ lazy.setup({
 				end,
 			},
 
+			-- TreeSitter ASM Highlighting
+			{ "rush-rs/tree-sitter-asm" },
+
 			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
 
 			-- Autocompletion
